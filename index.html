@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detail Tables</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script async src="src/detail_table.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="src/detail_table.css">
+    </head>
+    <body>
+        <h1>Detail Table</h1>
+        
+        <div>
+            Provides an easy to use interface for making tables that don&apos;t
+            suck. Sortable and searchable columns are declared as classes on the
+            first row&apos;s <code>&lt;td&gt;</code> elements.
+        </div>
+        
+        <div>&nbsp;</div>
+        
+        <div style="width:800px;margin:auto;border:1px solid black;">
+            
+            <div style="padding:5px;">
+                Search Name or Employee #: <input type="text" id="finder" />
+            </div>
+            
+            <table class="detail_table" id="table1" data-search="#finder">
+                <tr>
+                    <td class="sortable searchable">Name</td>
+                    <td class="sortable">Department</td>
+                    <td class="sortable">Salary</td>
+                    <td class="sortable searchable">Employee #</td>
+                </tr>
+                <tr>
+                    <td>Ryan</td>
+                    <td>Technical</td>
+                    <td data-sortval="32000">$32,000</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>Megan</td>
+                    <td>Technical</td>
+                    <td data-sortval="35000">$35,000</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Brooks</td>
+                    <td>Technical</td>
+                    <td data-sortval="29000">$29,000</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>Danielle</td>
+                    <td>Customer Service</td>
+                    <td data-sortval="33500">$33,500</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Teagan</td>
+                    <td>Sales</td>
+                    <td data-sortval="42000">$42,000</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>Sam</td>
+                    <td>Sales</td>
+                    <td data-sortval="50000">$50,000</td>
+                    <td>57</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    
+    <script>
+        $('#table1').ZDetailTable();
+    </script>
+</html>

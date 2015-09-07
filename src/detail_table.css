@@ -1,0 +1,60 @@
+.detail_table {
+    width:100%;
+}
+
+/* This selector starts with table.* so that it is more specific than the `:nth-child` rules */
+table.detail_table tr:first-child {
+    background-color: #e2e2e5;
+    border-top:1px solid #d5d5d5;
+    border-bottom:1px solid #d5d5d5;
+    height: 34px;
+}
+.detail_table tr:nth-child(even) {
+    background-color: #f4f4f7;
+}
+.detail_table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.detail_table td {
+    height:36px;
+    max-height:46px;
+    min-height:46px;
+    overflow:hidden;
+}
+.detail_table td {
+    padding: 5px;
+}
+
+/* Sorting controls */
+.detail_table a.sort {
+    display: inline-block;
+    
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    
+    margin-left: 5px;
+    
+    cursor: pointer;
+}
+
+.detail_table a.sort.sort_asc {
+    border-bottom: 10px solid rgb(173,176,169);
+}
+
+.detail_table a.sort.sort_asc.active {
+    border-bottom: 10px solid black;
+}
+
+.detail_table a.sort.sort_desc {
+    border-top: 10px solid rgb(173,176,169);
+}
+
+.detail_table a.sort.sort_desc.active {
+    border-top: 10px solid black;
+}
+
+.detail_table tr.filtered_out {
+    display: none;
+}
